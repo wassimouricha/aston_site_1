@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* header */
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+.Titre{
+    padding-left: 100px;
+    padding-right: 20px;
+    padding-bottom: 40px;
+    background: yellow;
+}
+
+.menu{
+    display: flex;
+    margin-right: 100px;
+    color: white;
+}
+
+.menu ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+.menu ul li {
+    margin: 5px;
+    padding: 5px;
+}
+
+.container1{
+    background-image: url("pizza.jpg");
+}
