@@ -1,28 +1,50 @@
-*{
+body {
     margin: 0;
     padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+/* premier container */
 
+.container1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: url('../img/pizza3.jpg') no-repeat center/cover ;
+    background-size: cover ;
+    height: 800px;
+    width: 100%;
+}
 /* header */
 
 .header{
     display: flex;
     justify-content: space-between;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
 
 }
 
 .Titre{
+    margin-top: 20px;
     padding-left: 100px;
     padding-right: 20px;
-    padding-bottom: 40px;
-    background: yellow;
+    padding-bottom: 30px;
+    background: #ffb901;
+    color: white;
 }
 
 .menu{
-    display: flex;
     margin-right: 100px;
     color: white;
+}
+
+.menu2{
+    display: none;
+    margin-right: 100px;
+    color: white;
+}
+
+.bourger{
+    font-size: 20px;
 }
 
 .menu ul {
@@ -30,12 +52,290 @@
     flex-direction: row;
     list-style: none;
 }
-
-.menu ul li {
-    margin: 5px;
-    padding: 5px;
+.menu2 ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
 }
 
-.container1{
-    background-image: url("pizza.jpg");
+.menu ul li {
+    cursor: pointer;
+    margin: 5px;
+    padding: 5px;
+    font-size: 25px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+.menu2 ul li {
+    cursor: pointer;
+    margin: 5px;
+    padding: 5px;
+    font-size: 25px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+.menu ul li:hover {
+    color: black;
+    padding-top: 10px;
+}
+
+
+
+.liseret{
+    display: flex;
+    height: 200px;
+    width: 100%;
+    background: #ffb901;
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+.liseret span {
+    font-size: 100px;
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+}
+
+.groupetitre{
+    display: flex;
+}
+
+
+
+.grand{
+    font-size: 100px;
+    font-weight: bold;
+    }
+
+.intérieur_liseret{
+    display: flex;
+    margin-left: 100px;
+    height: 240px;
+    align-items: flex-end;
+}
+
+
+
+.btn1{
+    height: 50px;
+    width: 280px;
+    background: #ffb901;
+    border: solid 3px;
+    border-color: white;
+    color: white;
+    font-size: 40px;
+    font-weight: 600;
+    margin: 10px;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+.btn1:hover{
+    background: white;
+    color: #ffb901;
+}
+
+
+/* deuxieme container */
+
+.container2{
+    background:  #242424;
+    height: 500px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+
+.whatsnew { 
+    grid-area: 1 / 2 / 6 / 4; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.imagepizza { 
+    grid-area: 2 / 4 / 5 / 6; 
+
+}
+
+.titrerotate{
+    z-index: 5;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    align-items: flex-end;
+    color: white;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-size: 30px;
+    margin-right: 40px;
+    margin-top: 20px;
+}
+
+.liseret2{
+    margin-top: 50px;
+    z-index: 1;
+    position: absolute;
+    display: flex;
+    height: 150px;
+    width: 800px;
+    background: #ffb901;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    left: 150px;
+}
+
+.liserettext{
+    display: flex;
+    z-index: 2;
+    color: white;
+    position: relative;
+}
+
+.liserettext p {
+    padding-top: 10px;
+    font-size: 20px;
+    font-weight: 600 ;
+}
+
+.imagepizza{
+    background: url(../img/pizza4.jpg) no-repeat center/cover ;
+}
+
+/* container 3 */
+
+.container3{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    height: 400px;
+    width: 100%;
+    background: white;
+}
+
+.container3 h2{
+    color: #ffb901;
+}
+
+.container3 p {
+    color: grey;
+}
+
+.carte1{
+    grid-area: 2 / 9 / 5 / 11; 
+}
+.carte2{
+    grid-area: 2 / 6 / 5 / 8;
+}
+.carte3{
+    grid-area: 2 / 3 / 5 / 5;
+}
+
+
+
+/* media queries */
+
+@media screen and (max-width: 1024px) {
+
+    .liseret2{
+        width: 600px;
+    }
+    
+}
+@media screen and (max-width: 768px) {
+
+    .container3{
+        display: block;
+
+    }
+
+    .container3 h2{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container3 p {
+        display: flex;
+        margin: 20px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .menu ul{
+        flex-direction: column;
+    }
+
+    .liseret2{
+        width: 400px;
+    }
+
+    .liseret{
+        margin-left: 0;
+        flex-direction: column;
+    }
+    
+}
+@media screen and (max-width: 550px) {
+
+    .whatsnew{
+        display: block;
+        font-size: 10px;
+    }
+
+    .liseret2{
+        width: 200px;
+    }
+
+    .liserettext{
+        width: 250px;
+    }
+    
+}
+@media screen and (max-width: 392px) {
+
+    .menu{
+        display: none;
+    }
+
+    .menu2{
+        display: block;
+    }
+
+    .grand{
+        font-size: 80px;
+    }
+
+    .liseret span{
+        font-size: 80px;
+    }
+
+    .liseret2{
+        width: 150px;
+    }
+
+    .liserettext{
+        width: 220px;
+    }
+
+    .btn1{
+        width: 150px;
+        font-size: 20px;
+    }
+    
+}
+@media screen and (max-width: 320px) {
+
+    .liseret2{
+        width: 120px;
+    }
+    
 }
