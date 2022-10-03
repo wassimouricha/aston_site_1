@@ -239,7 +239,57 @@ body {
     grid-area: 2 / 3 / 5 / 5;
 }
 
+.container4{
+display: flex;
+justify-content: center;
+align-items: center;
+background: url(../img/pizza5.jpg) no-repeat center/cover ;
+height: 1000px;
+width: 100%;
+}
 
+.blockbas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    color: #ffb901;
+    position: relative;
+    margin-bottom: 150px;
+    left: 580px;
+    margin-right: 20px;
+}
+
+.borded{
+    color: #ffb901;
+    padding: 15px;
+    border: solid 3px;
+    border-color: white;
+    width: 800px;
+    text-align: center;
+}
+
+.menupizza{
+    position: relative;
+    top: 280px;
+    right: 50px;
+    background: #ffb901;
+    color: white;
+    height: 400px;
+    width: 900px;
+    margin-right: 20px;
+}
+
+.menupizza p{
+    font-weight: bold;
+    margin: 20px;
+}
+.pizzus{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
 
 /* media queries */
 
